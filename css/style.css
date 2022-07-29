@@ -1,0 +1,42 @@
+body {
+  font-family: Noto Sans KR, -apple-system, BlinkMacSystemFont, Roboto, Segoe UI,
+    Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+}
+
+.visual_hidden {
+  display: none;
+}
+
+.wrap {
+  min-height: 100vh;
+  /* display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-between;
+  justify-content: space-between; */
+}
+
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #3d3d3d;
+}
+
+header .nav_logo {
+  width: auto;
+  height: 100%;
+  background-image: url(/img/header/logo.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+header .nav_item {
+}
+
+header .nav_style {
+  color: #fff;
+  font-weight: bold;
+}
