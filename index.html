@@ -5,23 +5,43 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/default.css">
-  <link rel="stylesheet" href="css/style.css">
+    <!--자바스크립트-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    
+    <!--슬릭슬라이드 js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    
+    <!--슬릭슬라이드 css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+
+    <!--스와이퍼(swiper) js-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!--스와이퍼(swiper) css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    
+    <!--개인 css-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="./js/javascript.js"></script>
+
 </head>
 <body>
   <div class="wrap">
     <header>
       <!--로고-->
-      <div class="nav_item nav_logo">
-        <span class="visual_hidden">티빙</span>
-        <a href=""></a>
+      <div class="nav_logo bg_re_size100 pointer">
+        <a href="" class="nav_style">
+          <span class="visual_hidden">티빙</span>
+        </a>
       </div>
-      <!--gnb-->
 
+      <!--gnb-->
       <div class="nav_item">
         <a href="" class="nav_style">
-          <div class="icon hd_icon"></div>
           실시간
         </a>
       </div>
@@ -38,19 +58,206 @@
         </a>
       </div>
 
-      <div class="nav_item">
+      <div class="paramount bg_re_size100">
         <a href="" class="nav_style">
-          <div class="icon hd_icon"></div>
+          <span class="visual_hidden">파라마운트</span>
         </a>
       </div>
-      
 
+      <aside>
+        <button type="button" class="search_bt bg_re_size100">찾기</button>
+        <div>
+          <img class="mypage" src="/img/header/mypage.webp" alt="마이페이지">
+        </div>
+      </aside>
 
     </header>
 
-    <main>
+    <section id="content_wrap">
 
-    </main>
+      <!--메인 배너 슬라이드-->
+      <section class="main_banner">
+        <div class="slider-wrap">
+          <div class="main_ban_slider">
+      
+            <div class="content">
+              <img src="/img/main/slider/sliderban1.webp" alt="ban1" class="content_img">
+            </div>
+            <div class="content">
+              <img src="/img/main/slider/sliderban2.webp" alt="ban2" class="content_img">
+            </div>
+            <div class="content">
+              <img src="/img/main/slider/sliderban3.webp" alt="ban2" class="content_img">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main_content">
+
+        <!--리스트 덩어리1-->
+        <section class="content_list">
+
+          <!--리스트별 타이틀-->
+          <h2 class="content_title">티빙에서 꼭 봐야하는 컨텐츠</h2>
+
+          <!--스와이퍼-->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <a href="">
+                  <img class="item_thumb" src="./img/main/content/listA/A_item1.jpg">
+                  <p class="item_title">환승연애 시즌2</p>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="">
+                  <img class="item_thumb" src="./img/main/content/listA/A_item2.jpg">
+                  <p class="item_title">제로섬 게임</p>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="">
+                  <img class="item_thumb" src="./img/main/content/listA/A_item3.jpg">
+                  <p class="item_title">페이킹 잇 시즌3</p>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="">
+                  <img class="item_thumb" src="./img/main/content/listA/A_item4.jpg">
+                  <p class="item_title">소시탐탐</p>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="">
+                  <img class="item_thumb" src="./img/main/content/listA/A_item5.jpg">
+                  <p class="item_title">서울체크인</p>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="">
+                  <img class="item_thumb" src="./img/main/content/listA/A_item6.jpg">
+                  <p class="item_title">조선혼담공작소 꽃파당</p>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="">
+                  <img class="item_thumb" src="./img/main/content/listA/A_item7.jpg">
+                  <p class="item_title">청일전자</p>
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+
+        </section>
+
+        <!--리스트 덩어리2-->
+        <section class="content_list">
+        
+          <!--리스트별 타이틀-->
+          <h2 class="content_title">티빙에서 꼭 봐야하는 컨텐츠</h2>
+        
+          <!--스와이퍼-->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+        
+              <div class="swiper-slide">
+                <a href="">
+                  <img class="item_thumb" src="./img/main/content/listB/B_item1.jpg">
+                  <p class="item_title">명량</p>
+                </a>
+              </div>
+        
+              <div class="swiper-slide">
+                <a href="">
+                  <img class="item_thumb" src="./img/main/content/listB/B_item2.jpg">
+                  <p class="item_title">명탐정 코난 칠흑의 추적자zzzzzzzzzzzz</p>
+                </a>
+              </div>
+        
+              <div class="swiper-slide">
+                <a href="">
+                  <img class="item_thumb" src="./img/main/content/listB/B_item3.jpg">
+                  <p class="item_title">연애 빠진 로맨스</p>
+                </a>
+              </div>
+        
+              <div class="swiper-slide">
+                <a href="">
+                  <img class="item_thumb" src="./img/main/content/listB/B_item4.jpg">
+                  <p class="item_title">탑건</p>
+                </a>
+              </div>
+        
+              <div class="swiper-slide">
+                <a href="">
+                  <img class="item_thumb" src="./img/main/content/listB/B_item5.jpg">
+                  <p class="item_title">허리케인 쓰나미</p>
+                </a>
+              </div>
+        
+              <div class="swiper-slide">
+                <a href="">
+                  <img class="item_thumb" src="./img/main/content/listB/B_item6.jpg">
+                  <p class="item_title">명탐정 코난 비색의 탄환</p>
+                </a>
+              </div>
+        
+              <div class="swiper-slide">
+                <a href="">
+                  <img class="item_thumb" src="./img/main/content/listB/B_item7.jpg">
+                  <p class="item_title">명탐정 코난 제로의 집행인</p>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="">
+                  <img class="item_thumb" src="./img/main/content/listB/B_item8.jpg">
+                  <p class="item_title">앵커</p>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="">
+                  <img class="item_thumb" src="./img/main/content/listB/B_item9.jpg">
+                  <p class="item_title">범죄도시</p>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="">
+                  <img class="item_thumb" src="./img/main/content/listB/B_item10.jpg">
+                  <p class="item_title">명탐정코난 감청의 권</p>
+                </a>
+              </div>
+            </div>
+        
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        
+        
+        </section>
+
+
+      </section>
+
+    </section>
+
+    
 
     <footer>
 
