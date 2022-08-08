@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-    <!--자바스크립트-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
-    
-    <!--슬릭슬라이드 js-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    
-    <!--슬릭슬라이드 css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+  <title>티빙모작</title>
+  <!--자바스크립트-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
 
-    <!--스와이퍼(swiper) js-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!--슬릭슬라이드 js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
-    <!--스와이퍼(swiper) css-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <!--슬릭슬라이드 css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
 
-    <!--AOS js-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!--스와이퍼(swiper) js-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-    <!--AOS css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    
-    <!--폰트어썸-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+  <!--스와이퍼(swiper) css-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
-    <!--개인 css-->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/default.css">
-    <link rel="stylesheet" href="css/style.css">
+  <!--AOS js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
-    <script src="./js/javascript.js"></script>
+  <!--AOS css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!--폰트어썸-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+  <!--개인 css-->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="./js/javascript.js"></script>
 
 </head>
+
 <body>
   <div id="wrap">
     <header>
@@ -51,7 +53,8 @@
       <!--gnb-->
       <div class="nav_item">
         <a href="javascript:void(0)" class="nav_style">
-          실시간 <!--::before [live 빨간박스] 삽입함-->
+          실시간
+          <!--::before [live 빨간박스] 삽입함-->
         </a>
       </div>
 
@@ -77,13 +80,13 @@
       <aside>
         <button type="button" class="search_bt bg_re_size100">찾기</button>
         <div>
-          <img class="mypage" src="/img/header/mypage.webp" alt="마이페이지">
+          <img class="mypage" src="../img/header/mypage.webp" alt="마이페이지">
         </div>
 
         <div id="mypage_wrap">
 
           <div class="mypage_info">
-            <img class="mypage" src="/img/header/mypage.webp" alt="마이페이지">
+            <img class="mypage" src="../img/header/mypage.webp" alt="마이페이지">
             <div>
               <p class="font_fff"><strong>기본프로필</strong></p>
               <p class="font_fff_opa">프로필 전환</p>
@@ -99,15 +102,93 @@
               <li class="font_fff_opa">로그아웃</li>
             </ul>
           </div>
-          
-        </div> <!--[mypage_wrap] 끝!-->
+
+        </div>
+        <!--[mypage_wrap] 끝!-->
       </aside>
 
     </header>
 
     <!--검색창 토글-->
     <div id="search_wrap">
-    
+
+      <label for="">
+        <input class="search_input" type="text" placeholder="TV프로그램, 영화 제목 및 출연진으로 검색해보세요">
+        <button type="button" class="search_bt bg_re_size100">찾기</button>
+      </label>
+
+      <div id="search_word">
+        <ul>
+          <h2>최근 검색 내역</h2>
+          <li>검색 내역이 없습니다.</li>
+        </ul>
+        <ul>
+          <h2>실시간 인기 검색어</h2>
+          <li>
+            <button>
+              <span>1</span>
+              <h3>돌싱글즈3</h3>
+            </button>
+          </li>
+          <li>
+            <button>
+              <span>2</span>
+              <h3>뿅뿅 지구오락실</h3>
+            </button>
+          </li>
+          <li>
+            <button>
+              <span>3</span>
+              <h3>모범형사2</h3>
+            </button>
+          </li>
+          <li>
+            <button>
+              <span>4</span>
+              <h3>놀라운 토요일</h3>
+            </button>
+          </li>
+          <li>
+            <button>
+              <span>5</span>
+              <h3>환혼</h3>
+            </button>
+          </li>
+          <li>
+            <button>
+              <span>6</span>
+              <h3>텐트 밖은 유럽</h3>
+            </button>
+          </li>
+          <li>
+            <button>
+              <span>7</span>
+              <h3>마녀사냥 2022</h3>
+            </button>
+          </li>
+          <li>
+            <button>
+              <span>8</span>
+              <h3>유미의 세포들</h3>
+            </button>
+          </li>
+          <li>
+            <button>
+              <span>9</span>
+              <h3>아는형님</h3>
+            </button>
+          </li>
+          <li>
+            <button>
+              <span>10</span>
+              <h3>범죄도시2</h3>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+
+
     </div>
 
 
@@ -117,35 +198,37 @@
       <section id="main_banner">
         <div class="slider-wrap">
           <div class="main_ban_slider">
-      
+
             <div class="content">
-              <img src="/img/main/slider/sliderban1.webp" alt="ban1" class="content_img">
+              <img src="./img/main/slider/sliderban1.webp" alt="ban1" class="content_img">
             </div>
             <div class="content">
-              <img src="/img/main/slider/sliderban2.webp" alt="ban2" class="content_img">
+              <img src="./img/main/slider/sliderban2.webp" alt="ban2" class="content_img">
             </div>
             <div class="content">
-              <img src="/img/main/slider/sliderban3.webp" alt="ban3" class="content_img">
+              <img src="./img/main/slider/sliderban3.webp" alt="ban3" class="content_img">
             </div>
             <div class="content">
-              <img src="/img/main/slider/sliderban4.webp" alt="ban4" class="content_img">
+              <img src="./img/main/slider/sliderban4.webp" alt="ban4" class="content_img">
             </div>
             <div class="content">
-              <img src="/img/main/slider/sliderban5.webp" alt="ban5" class="content_img">
+              <img src="./img/main/slider/sliderban5.webp" alt="ban5" class="content_img">
             </div>
           </div>
         </div>
 
         <!--슬릭 슬라이드 재생/정지 버튼-->
         <div class="slick_btn">
-          <svg class="btn_pause active" version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-            y="0px" viewBox="0 0 320 512" style="enable-background:new 0 0 320 512;" xml:space="preserve">
+          <svg class="btn_pause active" version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 320 512"
+            style="enable-background:new 0 0 320 512;" xml:space="preserve">
             <path d="M272,63.1h-32c-26.5,0-48,21.5-48,47.1v288c0,26.5,21.5,48,48,48l32,1.8c26.5,0,48-21.5,48-48V112
           	C320,85.5,298.5,63.1,272,63.1z M80,63.1H48c-26.5,0-48,21.5-48,48v288C0,426.5,21.5,448,48,448h32c26.5,0,48-21.5,48-48V112
           	C128,85.5,106.5,63.1,80,63.1z" />
           </svg>
-          <svg  class="btn_play" version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-            y="0px" viewBox="0 0 384 512" style="enable-background:new 0 0 384 512;" xml:space="preserve">
+          <svg class="btn_play" version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 384 512"
+            style="enable-background:new 0 0 384 512;" xml:space="preserve">
             <path d="M361,215c14.3,8.8,23,24.3,23,41s-8.7,32.2-23,40.1l-288,176c-14.8,9.9-33.4,10.3-48.5,1.8C9.4,465.4,0,449.4,0,432V80
           	c0-17.4,9.4-33.4,24.5-41.9C39.7,29.6,58.2,30,73,39L361,215z" />
           </svg>
@@ -159,7 +242,7 @@
               <span>자세히보기</span>
             </div>
           </a>
-          
+
         </div>
       </section>
 
@@ -178,7 +261,7 @@
               <div class="swiper-slide">
                 <a class="item_box" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listA/A_item1.jpg">
+                    <img class="item_img" src="../img/main/content/listA/A_item1.jpg">
                   </div>
                   <div class="item_info">
                     <p class="item_title">환승연애 시즌2</p>
@@ -189,7 +272,7 @@
               <div class="swiper-slide">
                 <a class="item_box" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listA/A_item2.jpg">
+                    <img class="item_img" src="../img/main/content/listA/A_item2.jpg">
                   </div>
                   <div class="item_info">
                     <p class="item_title">제로섬 게임</p>
@@ -200,7 +283,7 @@
               <div class="swiper-slide">
                 <a class="item_box" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listA/A_item3.jpg">
+                    <img class="item_img" src="../img/main/content/listA/A_item3.jpg">
                   </div>
                   <div class="item_info">
                     <p class="item_title">페이킹 잇 시즌3</p>
@@ -211,7 +294,7 @@
               <div class="swiper-slide">
                 <a class="item_box" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listA/A_item4.jpg">
+                    <img class="item_img" src="../img/main/content/listA/A_item4.jpg">
                   </div>
                   <div class="item_info">
                     <p class="item_title">소시탐탐</p>
@@ -222,7 +305,7 @@
               <div class="swiper-slide">
                 <a class="item_box" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listA/A_item5.jpg">
+                    <img class="item_img" src="../img/main/content/listA/A_item5.jpg">
                   </div>
                   <div class="item_info">
                     <p class="item_title">서울체크인</p>
@@ -233,7 +316,7 @@
               <div class="swiper-slide">
                 <a class="item_box" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listA/A_item6.jpg">
+                    <img class="item_img" src="../img/main/content/listA/A_item6.jpg">
                   </div>
                   <div class="item_info">
                     <p class="item_title">조선혼담공작소 꽃파당</p>
@@ -244,7 +327,7 @@
               <div class="swiper-slide">
                 <a class="item_box" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listA/A_item7.jpg">
+                    <img class="item_img" src="../img/main/content/listA/A_item7.jpg">
                   </div>
                   <div class="item_info">
                     <p class="item_title">청일전자</p>
@@ -264,18 +347,18 @@
 
         <!--리스트 덩어리2-->
         <section class="content_list">
-        
+
           <!--리스트별 타이틀-->
           <h2 class="content_title">실시간 인기 영화</h2>
-        
+
           <!--스와이퍼-->
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-        
+
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item1.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item1.jpg">
                     <div class="item_summary">
                       <dl>
                         <dt>명량</dt>
@@ -285,7 +368,7 @@
                             잇따른 흥행 실패로 슬럼프에 빠진 중년의 영화감독 지완.
                             아르바이트 삼아 60년대에 활동한 한국 두 번째 여성 영화감독
                             홍은원 감독의 작품 여판사의 필름을 복원하게 된다.
-                    
+
                             사라진 필름을 찾아 홍감독의 마지막 행적을 따라가던 지완은
                             정체를 알 수 없는 모자 쓴 여성의 그림자와 함께
                             그 시간 속을 여행하게 되는데...
@@ -299,25 +382,25 @@
                   </div>
                 </a>
               </div>
-        
+
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item2.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item2.jpg">
                     <div class="item_summary">
                       <dl>
                         <dt>오마주</dt>
                         <dd>
                           <span>드라마</span>
                           <p>엄마 영화는 재미없다는 아들과 늘상 밥타령인 남편,
-                          잇따른 흥행 실패로 슬럼프에 빠진 중년의 영화감독 지완.
-                          아르바이트 삼아 60년대에 활동한 한국 두 번째 여성 영화감독
-                          홍은원 감독의 작품 <여판사>의 필름을 복원하게 된다.
-                          
-                            사라진 필름을 찾아 홍감독의 마지막 행적을 따라가던 지완은
-                            정체를 알 수 없는 모자 쓴 여성의 그림자와 함께
-                            그 시간 속을 여행하게 되는데...
-                            어쩐지, 희미해진 꿈과 영화에 대한 열정이 되살아나는 것만 같다.</p>
+                            잇따른 흥행 실패로 슬럼프에 빠진 중년의 영화감독 지완.
+                            아르바이트 삼아 60년대에 활동한 한국 두 번째 여성 영화감독
+                            홍은원 감독의 작품 <여판사>의 필름을 복원하게 된다.
+
+                              사라진 필름을 찾아 홍감독의 마지막 행적을 따라가던 지완은
+                              정체를 알 수 없는 모자 쓴 여성의 그림자와 함께
+                              그 시간 속을 여행하게 되는데...
+                              어쩐지, 희미해진 꿈과 영화에 대한 열정이 되살아나는 것만 같다.</p>
                         </dd>
                       </dl>
                     </div>
@@ -331,27 +414,27 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item3.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item3.jpg">
                     <div class="item_summary">
                       <dl>
                         <dt>연애 빠진 로맨스</dt>
                         <dd>
                           <span>로맨스</span>
                           <p>일도 연애도 마음대로 되지 않는 스물아홉 ‘자영’(전종서).
-                          전 남친과의 격한 이별 후 호기롭게 연애 은퇴를 선언했지만
-                          참을 수 없는 외로움에 못 이겨 최후의 보루인 데이팅 어플로 상대를 검색한다.
-                          
-                          일도 연애도 호구 잡히기 일쑤인 서른셋 ‘우리’(손석구).
-                          뒤통수 제대로 맞은 연애의 아픔도 잠시
-                          편집장으로부터 19금 칼럼을 떠맡게 되고 데이팅 어플에 반강제로 가입하게 된다.
-                          
-                          그렇게 설 명절 아침!
-                          이름, 이유, 마음 다 감추고 만난 ‘자영’과 ‘우리’.
-                          1도 기대하지 않았지만, 1일 차부터 둘은 서로에게 급속도로 빠져들게 되고
-                          연애인 듯 아닌 듯 미묘한 관계 속에 누구 하나 속마음을 쉽게 터놓지 못하는데...
-                          
-                          이게 연애가 아니면 도대체 뭔데?
-                          발 빼려다 푹 빠졌다!</p>
+                            전 남친과의 격한 이별 후 호기롭게 연애 은퇴를 선언했지만
+                            참을 수 없는 외로움에 못 이겨 최후의 보루인 데이팅 어플로 상대를 검색한다.
+
+                            일도 연애도 호구 잡히기 일쑤인 서른셋 ‘우리’(손석구).
+                            뒤통수 제대로 맞은 연애의 아픔도 잠시
+                            편집장으로부터 19금 칼럼을 떠맡게 되고 데이팅 어플에 반강제로 가입하게 된다.
+
+                            그렇게 설 명절 아침!
+                            이름, 이유, 마음 다 감추고 만난 ‘자영’과 ‘우리’.
+                            1도 기대하지 않았지만, 1일 차부터 둘은 서로에게 급속도로 빠져들게 되고
+                            연애인 듯 아닌 듯 미묘한 관계 속에 누구 하나 속마음을 쉽게 터놓지 못하는데...
+
+                            이게 연애가 아니면 도대체 뭔데?
+                            발 빼려다 푹 빠졌다!</p>
                         </dd>
                       </dl>
                     </div>
@@ -365,16 +448,19 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item4.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item4.jpg">
                     <div class="item_summary">
                       <dl>
                         <dt>탑건</dt>
                         <dd>
                           <span>드라마</span>
-                          <p>미국의 1급 전투 조종사를 양성하는 학교인 탑건. 피트 메버릭 미첼과 아이스맨. 탑건에 입학한 날 밤 파티석상. 메버릭은 술자리 카운터에 혼자 앉아 있는 금발의 미녀에게 매혹되어 그녀의 옆자리에 앉게는 되지만,
-                          침대로의 유혹은 거절당한다. 다음날 아침 수업 시간에 교관으로 나타난 금발의 미녀를 보고 메버릭은 깜짝 놀란다. 교관과 학생이라는 신분의 차이를 뛰어넘어 사랑에 빠지는 두 사람.
-                          
-                          어느날 훈련비행 중 긴급발진해 온 아이스맨조의 제트 기류에 휘말려 메버릭조의 구스가 사망하는 사건이 발생한다. 메버릭에게는 책임이 없다는 사실이 밝혀지지만 메버릭은 동료의 죽음에 충격을 받는데...</p>
+                          <p>미국의 1급 전투 조종사를 양성하는 학교인 탑건. 피트 메버릭 미첼과 아이스맨. 탑건에 입학한 날 밤 파티석상. 메버릭은 술자리 카운터에 혼자 앉아 있는 금발의
+                            미녀에게 매혹되어 그녀의 옆자리에 앉게는 되지만,
+                            침대로의 유혹은 거절당한다. 다음날 아침 수업 시간에 교관으로 나타난 금발의 미녀를 보고 메버릭은 깜짝 놀란다. 교관과 학생이라는 신분의 차이를 뛰어넘어 사랑에
+                            빠지는 두 사람.
+
+                            어느날 훈련비행 중 긴급발진해 온 아이스맨조의 제트 기류에 휘말려 메버릭조의 구스가 사망하는 사건이 발생한다. 메버릭에게는 책임이 없다는 사실이 밝혀지지만 메버릭은
+                            동료의 죽음에 충격을 받는데...</p>
                         </dd>
                       </dl>
                     </div>
@@ -388,14 +474,16 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item5.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item5.jpg">
                     <div class="item_summary">
                       <dl>
                         <dt>허리케인 쓰나미</dt>
                         <dd>
                           <span>드라마</span>
-                          <p>지구가 화성처럼 되버릴겁니다! 산소와 생명이 전혀없는 상태가 된다고!′ 과학자 ′조쉬′는 최근 발생하는 이상기후현상을 연구하던 중 사상 최악의 홍수와 함께 전세계가 바닷속으로 가라앉는 대재앙이 올 것을 예측한다.
-                          하지만 누구도 ′조쉬′의 예측을 믿어주지 않고 ′조쉬′는 대홍수를 대비하기 위한 배를 만들겠다며 홀로 떠나버린다. 3년 후, 세계 각 곳에서 ′조쉬′가 예견했던 대재앙의 징후들이 하나 둘 씩 나타나기 시작하는데...</p>
+                          <p>지구가 화성처럼 되버릴겁니다! 산소와 생명이 전혀없는 상태가 된다고!′ 과학자 ′조쉬′는 최근 발생하는 이상기후현상을 연구하던 중 사상 최악의 홍수와 함께 전세계가
+                            바닷속으로 가라앉는 대재앙이 올 것을 예측한다.
+                            하지만 누구도 ′조쉬′의 예측을 믿어주지 않고 ′조쉬′는 대홍수를 대비하기 위한 배를 만들겠다며 홀로 떠나버린다. 3년 후, 세계 각 곳에서 ′조쉬′가 예견했던
+                            대재앙의 징후들이 하나 둘 씩 나타나기 시작하는데...</p>
                         </dd>
                       </dl>
                     </div>
@@ -409,26 +497,26 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item6.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item6.jpg">
                     <div class="item_summary">
                       <dl>
                         <dt>범죄도시</dt>
                         <dd>
                           <span>액션</span>
                           <p>“오늘 밤, 다 쓸어버린다!”
-                          
-                          2004년 서울...
-                          하얼빈에서 넘어와 단숨에 기존 조직들을 장악하고
-                          가장 강력한 세력인 춘식이파 보스 ‘황사장(조재윤 분)’까지 위협하며
-                          도시 일대의 최강자로 급부상한 신흥범죄조직의 악랄한 보스 ‘장첸(윤계상 분)’.
-                          
-                          대한민국을 뒤흔든 ‘장첸(윤계상 분)’ 일당을 잡기 위해
-                          오직 주먹 한방으로 도시의 평화를 유지해 온 괴물형사 ‘마석도(마동석 분)’와
-                          인간미 넘치는 든든한 리더 ‘전일만(최귀화 분)’ 반장이 이끄는 강력반은
-                          나쁜 놈들을 한방에 쓸어버릴 끝.짱.나.는. 작전을 세우는데...
-                          
-                          통쾌하고! 화끈하고! 살벌하게!
-                          나쁜 놈들 때려잡는 강력반 형사들의 ‘조폭소탕작전’이 시작된다!</p>
+
+                            2004년 서울...
+                            하얼빈에서 넘어와 단숨에 기존 조직들을 장악하고
+                            가장 강력한 세력인 춘식이파 보스 ‘황사장(조재윤 분)’까지 위협하며
+                            도시 일대의 최강자로 급부상한 신흥범죄조직의 악랄한 보스 ‘장첸(윤계상 분)’.
+
+                            대한민국을 뒤흔든 ‘장첸(윤계상 분)’ 일당을 잡기 위해
+                            오직 주먹 한방으로 도시의 평화를 유지해 온 괴물형사 ‘마석도(마동석 분)’와
+                            인간미 넘치는 든든한 리더 ‘전일만(최귀화 분)’ 반장이 이끄는 강력반은
+                            나쁜 놈들을 한방에 쓸어버릴 끝.짱.나.는. 작전을 세우는데...
+
+                            통쾌하고! 화끈하고! 살벌하게!
+                            나쁜 놈들 때려잡는 강력반 형사들의 ‘조폭소탕작전’이 시작된다!</p>
                         </dd>
                       </dl>
                     </div>
@@ -442,24 +530,24 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item7.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item7.jpg">
                     <div class="item_summary">
                       <dl>
                         <dt>앵커</dt>
                         <dd>
                           <span>스릴러</span>
                           <p>“제 죽음이 정세라 앵커의 입을 통해 보도되면 너무 기쁠 것 같아요”
-                          생방송 5분 전, 방송국 간판 앵커 ‘세라’(천우희)에게
-                          자신이 살해될 것이라며 죽음을 예고하는 제보전화가 걸려온다.
-                          장난전화로 치부하기에는 찝찝한 마음을 감출 수 없는 ‘세라’.
-                          진짜 앵커가 될 기회라는 엄마 ‘소정’(이혜영)의 말에
-                          ‘세라’는 제보자의 집으로 향하고 제보자인 ‘미소’와 그녀의 딸의 시체를 목격한다.
-                          
-                          그날 이후, ‘세라’의 눈앞에 죽은 ‘미소’의 모습이 자꾸만 떠오르기 시작한다.
-                          사건 현장에서 미소의 주치의였던 정신과 의사 ‘인호’(신하균)를 마주하게 되며
-                          그에 대한 ‘세라’의 의심 또한 깊어지는데...
-                          
-                          완벽했던 앵커를 뒤흔들 충격적인 진실을 확인하라!</p>
+                            생방송 5분 전, 방송국 간판 앵커 ‘세라’(천우희)에게
+                            자신이 살해될 것이라며 죽음을 예고하는 제보전화가 걸려온다.
+                            장난전화로 치부하기에는 찝찝한 마음을 감출 수 없는 ‘세라’.
+                            진짜 앵커가 될 기회라는 엄마 ‘소정’(이혜영)의 말에
+                            ‘세라’는 제보자의 집으로 향하고 제보자인 ‘미소’와 그녀의 딸의 시체를 목격한다.
+
+                            그날 이후, ‘세라’의 눈앞에 죽은 ‘미소’의 모습이 자꾸만 떠오르기 시작한다.
+                            사건 현장에서 미소의 주치의였던 정신과 의사 ‘인호’(신하균)를 마주하게 되며
+                            그에 대한 ‘세라’의 의심 또한 깊어지는데...
+
+                            완벽했던 앵커를 뒤흔들 충격적인 진실을 확인하라!</p>
                         </dd>
                       </dl>
                     </div>
@@ -473,14 +561,15 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item8.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item8.jpg">
                     <div class="item_summary">
                       <dl>
                         <dt>상류사회</dt>
                         <dd>
                           <span>드라마</span>
-                          <p>학생들에게 인기와 존경을 동시에 받는 경제학 교수 ‘태준’(박해일)은 우연한 기회를 통해 촉망받는 정치 신인으로 국회의원 선거에 출마하게 된다. 한편 그의 아내이자 미래미술관의 부관장 ‘수연’(수애)은 재개관전을
-                          통해 관장 자리에 오르려 한다.</p>
+                          <p>학생들에게 인기와 존경을 동시에 받는 경제학 교수 ‘태준’(박해일)은 우연한 기회를 통해 촉망받는 정치 신인으로 국회의원 선거에 출마하게 된다. 한편 그의 아내이자
+                            미래미술관의 부관장 ‘수연’(수애)은 재개관전을
+                            통해 관장 자리에 오르려 한다.</p>
                         </dd>
                       </dl>
                     </div>
@@ -494,21 +583,21 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item9.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item9.jpg">
                     <div class="item_summary">
                       <dl>
                         <dt>극한직업</dt>
                         <dd>
                           <span>드라마</span>
                           <p>낮에는 치킨장사! 밤에는 잠복근무!
-                          지금까지 이런 수사는 없었다!
-                          불철주야 달리고 구르지만 실적은 바닥, 급기야 해체 위기를 맞는 마약반!
-                          더 이상 물러설 곳이 없는 팀의 맏형 고반장은 국제 범죄조직의 국내 마약 밀반입 정황을 포착하고
-                          장형사, 마형사, 영호, 재훈까지 4명의 팀원들과 함께 잠복 수사에 나선다.
-                          마약반은 24시간 감시를 위해 범죄조직의 아지트 앞 치킨집을 인수해 위장 창업을 하게 되고,
-                          뜻밖의 절대미각을 지닌 마형사의 숨은 재능으로 치킨집은 일약 맛집으로 입소문이 나기 시작한다.
-                          수사는 뒷전, 치킨장사로 눈코 뜰 새 없이 바빠진 마약반에게 어느 날 절호의 기회가 찾아오는데...
-                          범인을 잡을 것인가, 닭을 잡을 것인가!</p>
+                            지금까지 이런 수사는 없었다!
+                            불철주야 달리고 구르지만 실적은 바닥, 급기야 해체 위기를 맞는 마약반!
+                            더 이상 물러설 곳이 없는 팀의 맏형 고반장은 국제 범죄조직의 국내 마약 밀반입 정황을 포착하고
+                            장형사, 마형사, 영호, 재훈까지 4명의 팀원들과 함께 잠복 수사에 나선다.
+                            마약반은 24시간 감시를 위해 범죄조직의 아지트 앞 치킨집을 인수해 위장 창업을 하게 되고,
+                            뜻밖의 절대미각을 지닌 마형사의 숨은 재능으로 치킨집은 일약 맛집으로 입소문이 나기 시작한다.
+                            수사는 뒷전, 치킨장사로 눈코 뜰 새 없이 바빠진 마약반에게 어느 날 절호의 기회가 찾아오는데...
+                            범인을 잡을 것인가, 닭을 잡을 것인가!</p>
                         </dd>
                       </dl>
                     </div>
@@ -522,20 +611,20 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item10.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item10.jpg">
                     <div class="item_summary">
                       <dl>
                         <dt>명탐정 코난：칠흑의 추적자</dt>
                         <dd>
                           <span>애니메이션</span>
                           <p>서울 주변의 크고 작은 도시에서 여섯 건의 살인사건이 연쇄적으로 발생한다.
-                          피해자 곁에 수수께끼의 마작패가 남겨져 있는 것으로 보아 동일범일 가능성이 높다.
-                          경찰의 명예를 걸고 더 이상 사건이 일어나지 않도록 막으라는 관리관의 지휘 하에 골롬보 반장을 비롯한 각 경찰서의 담당 형사들이 모여 수사회의를 연다.
-                          유 명한도 특별 자문위원으로 회의에 참석한다. 경찰의 수사회의가 열리는 바로 그 장소에서 코난은 검은 조직의 진이 탄 포르쉐를 발견한다.
-                          검은 조직의 누군가가 형사로 변장해 회의에 침입했고, 이번 사건이 검은 조직과 연관 있다는 사실을 눈치 챈 코난은 자신과 장미의 정체가 드러날까 봐 걱정이 된다.
-                          용의자를 체포하는 과정에서 베르무트와 접촉하는 코난.
-                          베르무트는 검은 조직의 멤버 중 하나가 범인에게 살해되었고, 그 범인이 조직의 중요한 자료가 든 메모리카드를 들고 사라졌다는 정보를 준다.
-                          그리고 경찰 내부에 심어놓은 조직원이 아이리쉬라는 것도 가르쳐 준다.</p>
+                            피해자 곁에 수수께끼의 마작패가 남겨져 있는 것으로 보아 동일범일 가능성이 높다.
+                            경찰의 명예를 걸고 더 이상 사건이 일어나지 않도록 막으라는 관리관의 지휘 하에 골롬보 반장을 비롯한 각 경찰서의 담당 형사들이 모여 수사회의를 연다.
+                            유 명한도 특별 자문위원으로 회의에 참석한다. 경찰의 수사회의가 열리는 바로 그 장소에서 코난은 검은 조직의 진이 탄 포르쉐를 발견한다.
+                            검은 조직의 누군가가 형사로 변장해 회의에 침입했고, 이번 사건이 검은 조직과 연관 있다는 사실을 눈치 챈 코난은 자신과 장미의 정체가 드러날까 봐 걱정이 된다.
+                            용의자를 체포하는 과정에서 베르무트와 접촉하는 코난.
+                            베르무트는 검은 조직의 멤버 중 하나가 범인에게 살해되었고, 그 범인이 조직의 중요한 자료가 든 메모리카드를 들고 사라졌다는 정보를 준다.
+                            그리고 경찰 내부에 심어놓은 조직원이 아이리쉬라는 것도 가르쳐 준다.</p>
                         </dd>
                       </dl>
                     </div>
@@ -546,28 +635,28 @@
                 </a>
               </div>
             </div>
-        
+
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
           </div>
-        
+
         </section>
 
         <!--리스트 덩어리3-->
         <section class="content_list">
-        
+
           <!--리스트별 타이틀-->
           <h2 class="content_title">실시간 인기 영화</h2>
-        
+
           <!--스와이퍼-->
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-        
+
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item1.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item1.jpg">
                     <div class="item_summary">
                       <dl>
                         <dt>명량</dt>
@@ -577,7 +666,7 @@
                             잇따른 흥행 실패로 슬럼프에 빠진 중년의 영화감독 지완.
                             아르바이트 삼아 60년대에 활동한 한국 두 번째 여성 영화감독
                             홍은원 감독의 작품 여판사의 필름을 복원하게 된다.
-                    
+
                             사라진 필름을 찾아 홍감독의 마지막 행적을 따라가던 지완은
                             정체를 알 수 없는 모자 쓴 여성의 그림자와 함께
                             그 시간 속을 여행하게 되는데...
@@ -591,25 +680,25 @@
                   </div>
                 </a>
               </div>
-        
+
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item2.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item2.jpg">
                     <div class="item_summary">
                       <dl>
                         <dt>오마주</dt>
                         <dd>
                           <span>드라마</span>
                           <p>엄마 영화는 재미없다는 아들과 늘상 밥타령인 남편,
-                          잇따른 흥행 실패로 슬럼프에 빠진 중년의 영화감독 지완.
-                          아르바이트 삼아 60년대에 활동한 한국 두 번째 여성 영화감독
-                          홍은원 감독의 작품 <여판사>의 필름을 복원하게 된다.
-                          
-                            사라진 필름을 찾아 홍감독의 마지막 행적을 따라가던 지완은
-                            정체를 알 수 없는 모자 쓴 여성의 그림자와 함께
-                            그 시간 속을 여행하게 되는데...
-                            어쩐지, 희미해진 꿈과 영화에 대한 열정이 되살아나는 것만 같다.</p>
+                            잇따른 흥행 실패로 슬럼프에 빠진 중년의 영화감독 지완.
+                            아르바이트 삼아 60년대에 활동한 한국 두 번째 여성 영화감독
+                            홍은원 감독의 작품 <여판사>의 필름을 복원하게 된다.
+
+                              사라진 필름을 찾아 홍감독의 마지막 행적을 따라가던 지완은
+                              정체를 알 수 없는 모자 쓴 여성의 그림자와 함께
+                              그 시간 속을 여행하게 되는데...
+                              어쩐지, 희미해진 꿈과 영화에 대한 열정이 되살아나는 것만 같다.</p>
                         </dd>
                       </dl>
                     </div>
@@ -623,27 +712,27 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item3.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item3.jpg">
                     <div class="item_summary">
                       <dl>
                         <dt>연애 빠진 로맨스</dt>
                         <dd>
                           <span>로맨스</span>
                           <p>일도 연애도 마음대로 되지 않는 스물아홉 ‘자영’(전종서).
-                          전 남친과의 격한 이별 후 호기롭게 연애 은퇴를 선언했지만
-                          참을 수 없는 외로움에 못 이겨 최후의 보루인 데이팅 어플로 상대를 검색한다.
-                          
-                          일도 연애도 호구 잡히기 일쑤인 서른셋 ‘우리’(손석구).
-                          뒤통수 제대로 맞은 연애의 아픔도 잠시
-                          편집장으로부터 19금 칼럼을 떠맡게 되고 데이팅 어플에 반강제로 가입하게 된다.
-                          
-                          그렇게 설 명절 아침!
-                          이름, 이유, 마음 다 감추고 만난 ‘자영’과 ‘우리’.
-                          1도 기대하지 않았지만, 1일 차부터 둘은 서로에게 급속도로 빠져들게 되고
-                          연애인 듯 아닌 듯 미묘한 관계 속에 누구 하나 속마음을 쉽게 터놓지 못하는데...
-                          
-                          이게 연애가 아니면 도대체 뭔데?
-                          발 빼려다 푹 빠졌다!</p>
+                            전 남친과의 격한 이별 후 호기롭게 연애 은퇴를 선언했지만
+                            참을 수 없는 외로움에 못 이겨 최후의 보루인 데이팅 어플로 상대를 검색한다.
+
+                            일도 연애도 호구 잡히기 일쑤인 서른셋 ‘우리’(손석구).
+                            뒤통수 제대로 맞은 연애의 아픔도 잠시
+                            편집장으로부터 19금 칼럼을 떠맡게 되고 데이팅 어플에 반강제로 가입하게 된다.
+
+                            그렇게 설 명절 아침!
+                            이름, 이유, 마음 다 감추고 만난 ‘자영’과 ‘우리’.
+                            1도 기대하지 않았지만, 1일 차부터 둘은 서로에게 급속도로 빠져들게 되고
+                            연애인 듯 아닌 듯 미묘한 관계 속에 누구 하나 속마음을 쉽게 터놓지 못하는데...
+
+                            이게 연애가 아니면 도대체 뭔데?
+                            발 빼려다 푹 빠졌다!</p>
                         </dd>
                       </dl>
                     </div>
@@ -657,16 +746,19 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item4.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item4.jpg">
                     <div class="item_summary">
                       <dl>
                         <dt>탑건</dt>
                         <dd>
                           <span>드라마</span>
-                          <p>미국의 1급 전투 조종사를 양성하는 학교인 탑건. 피트 메버릭 미첼과 아이스맨. 탑건에 입학한 날 밤 파티석상. 메버릭은 술자리 카운터에 혼자 앉아 있는 금발의 미녀에게 매혹되어 그녀의 옆자리에 앉게는 되지만,
-                          침대로의 유혹은 거절당한다. 다음날 아침 수업 시간에 교관으로 나타난 금발의 미녀를 보고 메버릭은 깜짝 놀란다. 교관과 학생이라는 신분의 차이를 뛰어넘어 사랑에 빠지는 두 사람.
-                          
-                          어느날 훈련비행 중 긴급발진해 온 아이스맨조의 제트 기류에 휘말려 메버릭조의 구스가 사망하는 사건이 발생한다. 메버릭에게는 책임이 없다는 사실이 밝혀지지만 메버릭은 동료의 죽음에 충격을 받는데...</p>
+                          <p>미국의 1급 전투 조종사를 양성하는 학교인 탑건. 피트 메버릭 미첼과 아이스맨. 탑건에 입학한 날 밤 파티석상. 메버릭은 술자리 카운터에 혼자 앉아 있는 금발의
+                            미녀에게 매혹되어 그녀의 옆자리에 앉게는 되지만,
+                            침대로의 유혹은 거절당한다. 다음날 아침 수업 시간에 교관으로 나타난 금발의 미녀를 보고 메버릭은 깜짝 놀란다. 교관과 학생이라는 신분의 차이를 뛰어넘어 사랑에
+                            빠지는 두 사람.
+
+                            어느날 훈련비행 중 긴급발진해 온 아이스맨조의 제트 기류에 휘말려 메버릭조의 구스가 사망하는 사건이 발생한다. 메버릭에게는 책임이 없다는 사실이 밝혀지지만 메버릭은
+                            동료의 죽음에 충격을 받는데...</p>
                         </dd>
                       </dl>
                     </div>
@@ -680,14 +772,16 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item5.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item5.jpg">
                     <div class="item_summary">
                       <dl>
                         <dt>허리케인 쓰나미</dt>
                         <dd>
                           <span>드라마</span>
-                          <p>지구가 화성처럼 되버릴겁니다! 산소와 생명이 전혀없는 상태가 된다고!′ 과학자 ′조쉬′는 최근 발생하는 이상기후현상을 연구하던 중 사상 최악의 홍수와 함께 전세계가 바닷속으로 가라앉는 대재앙이 올 것을 예측한다.
-                          하지만 누구도 ′조쉬′의 예측을 믿어주지 않고 ′조쉬′는 대홍수를 대비하기 위한 배를 만들겠다며 홀로 떠나버린다. 3년 후, 세계 각 곳에서 ′조쉬′가 예견했던 대재앙의 징후들이 하나 둘 씩 나타나기 시작하는데...</p>
+                          <p>지구가 화성처럼 되버릴겁니다! 산소와 생명이 전혀없는 상태가 된다고!′ 과학자 ′조쉬′는 최근 발생하는 이상기후현상을 연구하던 중 사상 최악의 홍수와 함께 전세계가
+                            바닷속으로 가라앉는 대재앙이 올 것을 예측한다.
+                            하지만 누구도 ′조쉬′의 예측을 믿어주지 않고 ′조쉬′는 대홍수를 대비하기 위한 배를 만들겠다며 홀로 떠나버린다. 3년 후, 세계 각 곳에서 ′조쉬′가 예견했던
+                            대재앙의 징후들이 하나 둘 씩 나타나기 시작하는데...</p>
                         </dd>
                       </dl>
                     </div>
@@ -701,26 +795,26 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item6.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item6.jpg">
                     <div class="item_summary">
                       <dl>
                         <dt>범죄도시</dt>
                         <dd>
                           <span>액션</span>
                           <p>“오늘 밤, 다 쓸어버린다!”
-                          
-                          2004년 서울...
-                          하얼빈에서 넘어와 단숨에 기존 조직들을 장악하고
-                          가장 강력한 세력인 춘식이파 보스 ‘황사장(조재윤 분)’까지 위협하며
-                          도시 일대의 최강자로 급부상한 신흥범죄조직의 악랄한 보스 ‘장첸(윤계상 분)’.
-                          
-                          대한민국을 뒤흔든 ‘장첸(윤계상 분)’ 일당을 잡기 위해
-                          오직 주먹 한방으로 도시의 평화를 유지해 온 괴물형사 ‘마석도(마동석 분)’와
-                          인간미 넘치는 든든한 리더 ‘전일만(최귀화 분)’ 반장이 이끄는 강력반은
-                          나쁜 놈들을 한방에 쓸어버릴 끝.짱.나.는. 작전을 세우는데...
-                          
-                          통쾌하고! 화끈하고! 살벌하게!
-                          나쁜 놈들 때려잡는 강력반 형사들의 ‘조폭소탕작전’이 시작된다!</p>
+
+                            2004년 서울...
+                            하얼빈에서 넘어와 단숨에 기존 조직들을 장악하고
+                            가장 강력한 세력인 춘식이파 보스 ‘황사장(조재윤 분)’까지 위협하며
+                            도시 일대의 최강자로 급부상한 신흥범죄조직의 악랄한 보스 ‘장첸(윤계상 분)’.
+
+                            대한민국을 뒤흔든 ‘장첸(윤계상 분)’ 일당을 잡기 위해
+                            오직 주먹 한방으로 도시의 평화를 유지해 온 괴물형사 ‘마석도(마동석 분)’와
+                            인간미 넘치는 든든한 리더 ‘전일만(최귀화 분)’ 반장이 이끄는 강력반은
+                            나쁜 놈들을 한방에 쓸어버릴 끝.짱.나.는. 작전을 세우는데...
+
+                            통쾌하고! 화끈하고! 살벌하게!
+                            나쁜 놈들 때려잡는 강력반 형사들의 ‘조폭소탕작전’이 시작된다!</p>
                         </dd>
                       </dl>
                     </div>
@@ -734,24 +828,24 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item7.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item7.jpg">
                     <div class="item_summary">
                       <dl>
                         <dt>앵커</dt>
                         <dd>
                           <span>스릴러</span>
                           <p>“제 죽음이 정세라 앵커의 입을 통해 보도되면 너무 기쁠 것 같아요”
-                          생방송 5분 전, 방송국 간판 앵커 ‘세라’(천우희)에게
-                          자신이 살해될 것이라며 죽음을 예고하는 제보전화가 걸려온다.
-                          장난전화로 치부하기에는 찝찝한 마음을 감출 수 없는 ‘세라’.
-                          진짜 앵커가 될 기회라는 엄마 ‘소정’(이혜영)의 말에
-                          ‘세라’는 제보자의 집으로 향하고 제보자인 ‘미소’와 그녀의 딸의 시체를 목격한다.
-                          
-                          그날 이후, ‘세라’의 눈앞에 죽은 ‘미소’의 모습이 자꾸만 떠오르기 시작한다.
-                          사건 현장에서 미소의 주치의였던 정신과 의사 ‘인호’(신하균)를 마주하게 되며
-                          그에 대한 ‘세라’의 의심 또한 깊어지는데...
-                          
-                          완벽했던 앵커를 뒤흔들 충격적인 진실을 확인하라!</p>
+                            생방송 5분 전, 방송국 간판 앵커 ‘세라’(천우희)에게
+                            자신이 살해될 것이라며 죽음을 예고하는 제보전화가 걸려온다.
+                            장난전화로 치부하기에는 찝찝한 마음을 감출 수 없는 ‘세라’.
+                            진짜 앵커가 될 기회라는 엄마 ‘소정’(이혜영)의 말에
+                            ‘세라’는 제보자의 집으로 향하고 제보자인 ‘미소’와 그녀의 딸의 시체를 목격한다.
+
+                            그날 이후, ‘세라’의 눈앞에 죽은 ‘미소’의 모습이 자꾸만 떠오르기 시작한다.
+                            사건 현장에서 미소의 주치의였던 정신과 의사 ‘인호’(신하균)를 마주하게 되며
+                            그에 대한 ‘세라’의 의심 또한 깊어지는데...
+
+                            완벽했던 앵커를 뒤흔들 충격적인 진실을 확인하라!</p>
                         </dd>
                       </dl>
                     </div>
@@ -765,14 +859,15 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item8.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item8.jpg">
                     <div class="item_summary">
                       <dl>
                         <dt>상류사회</dt>
                         <dd>
                           <span>드라마</span>
-                          <p>학생들에게 인기와 존경을 동시에 받는 경제학 교수 ‘태준’(박해일)은 우연한 기회를 통해 촉망받는 정치 신인으로 국회의원 선거에 출마하게 된다. 한편 그의 아내이자 미래미술관의 부관장 ‘수연’(수애)은 재개관전을
-                          통해 관장 자리에 오르려 한다.</p>
+                          <p>학생들에게 인기와 존경을 동시에 받는 경제학 교수 ‘태준’(박해일)은 우연한 기회를 통해 촉망받는 정치 신인으로 국회의원 선거에 출마하게 된다. 한편 그의 아내이자
+                            미래미술관의 부관장 ‘수연’(수애)은 재개관전을
+                            통해 관장 자리에 오르려 한다.</p>
                         </dd>
                       </dl>
                     </div>
@@ -786,21 +881,21 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item9.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item9.jpg">
                     <div class="item_summary">
                       <dl>
                         <dt>극한직업</dt>
                         <dd>
                           <span>드라마</span>
                           <p>낮에는 치킨장사! 밤에는 잠복근무!
-                          지금까지 이런 수사는 없었다!
-                          불철주야 달리고 구르지만 실적은 바닥, 급기야 해체 위기를 맞는 마약반!
-                          더 이상 물러설 곳이 없는 팀의 맏형 고반장은 국제 범죄조직의 국내 마약 밀반입 정황을 포착하고
-                          장형사, 마형사, 영호, 재훈까지 4명의 팀원들과 함께 잠복 수사에 나선다.
-                          마약반은 24시간 감시를 위해 범죄조직의 아지트 앞 치킨집을 인수해 위장 창업을 하게 되고,
-                          뜻밖의 절대미각을 지닌 마형사의 숨은 재능으로 치킨집은 일약 맛집으로 입소문이 나기 시작한다.
-                          수사는 뒷전, 치킨장사로 눈코 뜰 새 없이 바빠진 마약반에게 어느 날 절호의 기회가 찾아오는데...
-                          범인을 잡을 것인가, 닭을 잡을 것인가!</p>
+                            지금까지 이런 수사는 없었다!
+                            불철주야 달리고 구르지만 실적은 바닥, 급기야 해체 위기를 맞는 마약반!
+                            더 이상 물러설 곳이 없는 팀의 맏형 고반장은 국제 범죄조직의 국내 마약 밀반입 정황을 포착하고
+                            장형사, 마형사, 영호, 재훈까지 4명의 팀원들과 함께 잠복 수사에 나선다.
+                            마약반은 24시간 감시를 위해 범죄조직의 아지트 앞 치킨집을 인수해 위장 창업을 하게 되고,
+                            뜻밖의 절대미각을 지닌 마형사의 숨은 재능으로 치킨집은 일약 맛집으로 입소문이 나기 시작한다.
+                            수사는 뒷전, 치킨장사로 눈코 뜰 새 없이 바빠진 마약반에게 어느 날 절호의 기회가 찾아오는데...
+                            범인을 잡을 것인가, 닭을 잡을 것인가!</p>
                         </dd>
                       </dl>
                     </div>
@@ -814,20 +909,20 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item10.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item10.jpg">
                     <div class="item_summary">
                       <dl>
                         <dt>명탐정 코난：칠흑의 추적자</dt>
                         <dd>
                           <span>애니메이션</span>
                           <p>서울 주변의 크고 작은 도시에서 여섯 건의 살인사건이 연쇄적으로 발생한다.
-                          피해자 곁에 수수께끼의 마작패가 남겨져 있는 것으로 보아 동일범일 가능성이 높다.
-                          경찰의 명예를 걸고 더 이상 사건이 일어나지 않도록 막으라는 관리관의 지휘 하에 골롬보 반장을 비롯한 각 경찰서의 담당 형사들이 모여 수사회의를 연다.
-                          유 명한도 특별 자문위원으로 회의에 참석한다. 경찰의 수사회의가 열리는 바로 그 장소에서 코난은 검은 조직의 진이 탄 포르쉐를 발견한다.
-                          검은 조직의 누군가가 형사로 변장해 회의에 침입했고, 이번 사건이 검은 조직과 연관 있다는 사실을 눈치 챈 코난은 자신과 장미의 정체가 드러날까 봐 걱정이 된다.
-                          용의자를 체포하는 과정에서 베르무트와 접촉하는 코난.
-                          베르무트는 검은 조직의 멤버 중 하나가 범인에게 살해되었고, 그 범인이 조직의 중요한 자료가 든 메모리카드를 들고 사라졌다는 정보를 준다.
-                          그리고 경찰 내부에 심어놓은 조직원이 아이리쉬라는 것도 가르쳐 준다.</p>
+                            피해자 곁에 수수께끼의 마작패가 남겨져 있는 것으로 보아 동일범일 가능성이 높다.
+                            경찰의 명예를 걸고 더 이상 사건이 일어나지 않도록 막으라는 관리관의 지휘 하에 골롬보 반장을 비롯한 각 경찰서의 담당 형사들이 모여 수사회의를 연다.
+                            유 명한도 특별 자문위원으로 회의에 참석한다. 경찰의 수사회의가 열리는 바로 그 장소에서 코난은 검은 조직의 진이 탄 포르쉐를 발견한다.
+                            검은 조직의 누군가가 형사로 변장해 회의에 침입했고, 이번 사건이 검은 조직과 연관 있다는 사실을 눈치 챈 코난은 자신과 장미의 정체가 드러날까 봐 걱정이 된다.
+                            용의자를 체포하는 과정에서 베르무트와 접촉하는 코난.
+                            베르무트는 검은 조직의 멤버 중 하나가 범인에게 살해되었고, 그 범인이 조직의 중요한 자료가 든 메모리카드를 들고 사라졌다는 정보를 준다.
+                            그리고 경찰 내부에 심어놓은 조직원이 아이리쉬라는 것도 가르쳐 준다.</p>
                         </dd>
                       </dl>
                     </div>
@@ -838,12 +933,12 @@
                 </a>
               </div>
             </div>
-        
+
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
           </div>
-        
+
         </section>
 
         <!--광고-->
@@ -854,36 +949,37 @@
         <section id="adver_wrap">
           <a class="item_box">
             <div class="adver_box" data-aos="zoom-in" data-aos-duration="">
-                <img class="item_img img100" src="img/main/adver/adver1.jpg">
+              <img class="item_img img100" src="img/main/adver/adver1.jpg">
             </div>
           </a>
-        </section> <!--[adver_wrap] 끝!-->
+        </section>
+        <!--[adver_wrap] 끝!-->
 
         <!--리스트 덩어리4-->
         <section class="content_list">
-        
+
           <!--리스트별 타이틀-->
           <h2 class="content_title">실시간 인기 영화</h2>
-        
+
           <!--스와이퍼-->
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-        
+
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item1.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item1.jpg">
                   </div>
                   <div class="item_info">
                     <p class="item_title">명량</p>
                   </div>
                 </a>
               </div>
-        
+
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item2.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item2.jpg">
                   </div>
                   <div class="item_info">
                     <p class="item_title">오마주</p>
@@ -894,7 +990,7 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item3.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item3.jpg">
                   </div>
                   <div class="item_info">
                     <p class="item_title">연애 빠진 로맨스</p>
@@ -905,7 +1001,7 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item4.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item4.jpg">
                   </div>
                   <div class="item_info">
                     <p class="item_title">탑건</p>
@@ -916,7 +1012,7 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item5.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item5.jpg">
                   </div>
                   <div class="item_info">
                     <p class="item_title">허리케인 쓰나미</p>
@@ -927,7 +1023,7 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item6.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item6.jpg">
                   </div>
                   <div class="item_info">
                     <p class="item_title">범죄도시</p>
@@ -938,7 +1034,7 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item7.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item7.jpg">
                   </div>
                   <div class="item_info">
                     <p class="item_title">앵커</p>
@@ -949,7 +1045,7 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item8.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item8.jpg">
                   </div>
                   <div class="item_info">
                     <p class="item_title">상류사회</p>
@@ -960,7 +1056,7 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item9.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item9.jpg">
                   </div>
                   <div class="item_info">
                     <p class="item_title">극한직업</p>
@@ -971,7 +1067,7 @@
               <div class="swiper-slide">
                 <a class="item_box item_box2" href="javascript:void(0)">
                   <div class="item_thumb">
-                    <img class="item_img" src="./img/main/content/listB/B_item10.jpg">
+                    <img class="item_img" src="../img/main/content/listB/B_item10.jpg">
                   </div>
                   <div class="item_info">
                     <p class="item_title">명탐정 코난：칠흑의 추적자</p>
@@ -979,12 +1075,12 @@
                 </a>
               </div>
             </div>
-        
+
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
           </div>
-        
+
         </section>
 
         <!--이벤트-->
@@ -993,31 +1089,33 @@
           <div class="event_list">
             <a href="javascript:void(0)">
               <div class="event_item">
-                <img class="img100" src="./img/main/event/event1.jpg" alt="">
+                <img class="img100" src="../img/main/event/event1.jpg" alt="">
               </div>
             </a>
 
             <a href="javascript:void(0)">
               <div class="event_item">
-                <img class="img100" src="./img/main/event/event2.jpg" alt="">
+                <img class="img100" src="../img/main/event/event2.jpg" alt="">
               </div>
             </a>
 
             <a href="javascript:void(0)">
               <div class="event_item">
-                <img class="img100" src="./img/main/event/event3.jpg" alt="">
+                <img class="img100" src="../img/main/event/event3.jpg" alt="">
               </div>
             </a>
 
             <a href="javascript:void(0)">
               <div class="event_item">
-                <img class="img100" src="./img/main/event/event4.jpg" alt="">
+                <img class="img100" src="../img/main/event/event4.jpg" alt="">
               </div>
             </a>
           </div>
-        </section> <!--[event_wrap] 끝-->
+        </section>
+        <!--[event_wrap] 끝-->
 
-      </section> <!--[main_content] 끝-->
+      </section>
+      <!--[main_content] 끝-->
 
     </section>
 
@@ -1034,7 +1132,7 @@
             <a href="javascript:void(0)" class="font_fff">그룹계열사 바로가기+</a>
           </div>
         </div>
-        
+
         <div id="ft_policy" class="font_fff">
           <nav>
             <a class="font_fff" href="javascript:void(0)">고객센터</a>
@@ -1045,7 +1143,7 @@
             <a class="font_fff" href="javascript:void(0)">이벤트</a>
           </nav>
         </div>
-        
+
         <div id="ft_info" class="font_fff">
           <p>
             <span class="font_fff_opa">대표이사 : YANG JIEUL</span>
@@ -1071,12 +1169,12 @@
             <span class="font_fff_opa">Mnet 고객센터(방송편성문의) : 1855-1631</span>
           </p>
         </div>
-        
+
         <div id="ft_sns" class="font_fff">
           <div>
             <a href="javascript:void(0)">
-              <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                y="0px" viewBox="0 0 576 512" xml:space="preserve">
+              <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 576 512" xml:space="preserve">
                 <path d="M549.7,124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8,64,288,64,288,64S117.2,64,74.6,75.5c-23.5,6.3-42,24.9-48.3,48.6
               	c-11.4,42.9-11.4,132.3-11.4,132.3s0,89.4,11.4,132.3c6.3,23.6,24.8,41.5,48.3,47.8C117.2,448,288,448,288,448s170.8,0,213.4-11.5
               	c23.5-6.3,42-24.2,48.3-47.8c11.4-42.9,11.4-132.3,11.4-132.3S561.1,166.9,549.7,124.1z M232.1,337.6V175.2l142.7,81.2L232.1,337.6
@@ -1086,8 +1184,9 @@
           </div>
           <div>
             <a href="javascript:void(0)">
-              <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                y="0px" viewBox="0 0 448 512" style="enable-background:new 0 0 448 512;" xml:space="preserve">
+              <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 448 512"
+                style="enable-background:new 0 0 448 512;" xml:space="preserve">
                 <path d="M224.1,141c-63.6,0-114.9,51.3-114.9,114.9s51.3,114.9,114.9,114.9S339,319.5,339,255.9S287.7,141,224.1,141z M224.1,330.6
               	c-41.1,0-74.7-33.5-74.7-74.7s33.5-74.7,74.7-74.7s74.7,33.5,74.7,74.7S265.2,330.6,224.1,330.6L224.1,330.6z M370.5,136.3
               	c0,14.9-12,26.8-26.8,26.8c-14.9,0-26.8-12-26.8-26.8s12-26.8,26.8-26.8S370.5,121.5,370.5,136.3z M446.6,163.5
@@ -1102,8 +1201,9 @@
           </div>
           <div>
             <a href="javascript:void(0)">
-              <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+              <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                style="enable-background:new 0 0 512 512;" xml:space="preserve">
                 <path d="M459.4,151.7c0.3,4.5,0.3,9.1,0.3,13.6c0,138.7-105.6,298.6-298.6,298.6c-59.5,0-114.7-17.2-161.1-47.1
               	c8.4,1,16.6,1.3,25.3,1.3c49.1,0,94.2-16.6,130.3-44.8c-46.1-1-84.8-31.2-98.1-72.8c6.5,1,13,1.6,19.8,1.6c9.4,0,18.8-1.3,27.6-3.6
               	c-48.1-9.7-84.1-52-84.1-103v-1.3c14,7.8,30.2,12.7,47.4,13.3c-28.3-18.8-46.8-51-46.8-87.4c0-19.5,5.2-37.4,14.3-53
@@ -1115,15 +1215,16 @@
           </div>
           <div>
             <a href="javascript:void(0)">
-              <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                y="0px" viewBox="0 0 320 512" style="enable-background:new 0 0 320 512;" xml:space="preserve">
+              <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 320 512"
+                style="enable-background:new 0 0 320 512;" xml:space="preserve">
                 <path d="M279.1,288l14.2-92.7h-88.9v-60.1c0-25.3,12.4-50.1,52.2-50.1h40.4V6.3c0,0-36.7-6.3-71.7-6.3
               	c-73.2,0-121.1,44.4-121.1,124.7v70.6H22.9V288h81.4v224h100.2V288H279.1z" />
               </svg>
             </a>
           </div>
         </div>
-        
+
         <div id="ft_copyright" class="font_fff">
           <p>Copyright © 주식회사 티빙 All right reserved.</p>
         </div>
@@ -1132,6 +1233,7 @@
 
     </footer>
   </div>
-  
+
 </body>
+
 </html>

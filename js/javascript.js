@@ -40,7 +40,7 @@ $(document).ready(function () {
    $("#mypage_wrap").css("display", "block");
   });
   $('.mypage').mouseout(function() {
-   $("#mypage_wrap").css("display", "none");
+   $("#mypage_wrap").cimage.pngss("display", "none");
   });
 
   $('#mypage_wrap').mouseover(function() {
@@ -52,9 +52,9 @@ $(document).ready(function () {
 
 
   //검색창 토글 --------------------------------------------
-  // $('.search_bt').click(function(){
-  //   $('#search_wrap').toggle();
-  // })
+  $('.search_bt').click(function(){
+    $('#search_wrap').toggle();
+  })
   
   //상단 올라가는 버튼
   $('#top_btn').click(function () {

@@ -1,7 +1,6 @@
 /*질문거리
-1. 마이페이지 마우스 오버 유지
+1. 마이페이지 마우스 오버 유지  -->  
 2. 마이페이지 flex 사진 자동 조절 해제
-3. 광고 AOS 한번 효과시 효과 유지
 4. swipe overflow : hidden 넘어서 좌우 끝까지 보이기
 */
 
@@ -110,12 +109,92 @@ aside {
   align-items: center;
 }
 
-.search_bt {
+aside > .search_bt {
   width: 40px;
   height: 100%;
   background-image: url(/img/header/icon_search.svg);
   background-position: center center;
   text-indent: -9999px; /*텍스트 안보이게*/
+}
+
+/*검색창 토글 랩*/
+#search_wrap {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  height: 670px;
+  background-color: rgba(25, 25, 25, 0.99);
+  padding: 7em 10em;
+  display: none;
+  transition: 1s;
+}
+
+/*search 텍스트 입력창/검색아이콘*/
+#search_wrap label {
+  display: flex;
+  border-bottom: 3px solid #fff;
+  overflow: visible;
+}
+
+/*search 텍스트 입력창*/
+#search_wrap input {
+  width: calc(100% - 3rem);
+  height: 30px;
+  font-size: 1.6rem;
+  padding: 2rem;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+/*search 검색아이콘*/
+#search_wrap .search_bt {
+  width: 40px;
+  background-image: url(/img/header/icon_search.svg);
+  background-position: center center;
+  text-indent: -9999px; /*텍스트 안보이게*/
+}
+
+/*최근검색내역/실시간인기검색어*/
+#search_word {
+  display: flex;
+  align-items: flex-start;
+}
+
+#search_word ul {
+  padding: 2rem;
+}
+
+/*검색창 타이틀*/
+#search_word ul h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+#search_word ul button {
+  display: flex;
+  gap: 10px;
+}
+
+/*실시간 인기검색어 넘버*/
+#search_word ul button span {
+  color: rgb(255, 21, 60);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+#search_word ul li {
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #fff;
+  margin: 10px 0;
+}
+
+#search_word ul button h3 {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 500;
 }
 
 /*마이페이지 아이콘*/
@@ -145,6 +224,7 @@ header aside .mypage {
   display: flex;
   gap: 0 10px;
   padding: 2rem;
+  align-items: center; /*위아래 늘어남 방지*/
 }
 
 .mypage_info div p {
