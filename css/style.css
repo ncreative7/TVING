@@ -89,14 +89,14 @@ header .nav_style {
 header .nav_logo {
   width: 100px;
   height: 100%;
-  background-image: url(/img/header/logo.svg);
+  background-image: url(../img/header/logo.svg);
   background-position: 0 50%;
 }
 
 header .paramount {
   width: 100px;
   height: 100%;
-  background-image: url(/img/header/menu_paramount.svg);
+  background-image: url(../img/header/menu_paramount.svg);
   background-position: center center;
 }
 
