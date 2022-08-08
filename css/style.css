@@ -1,3 +1,10 @@
+/*질문거리
+1. 마이페이지 마우스 오버 유지
+2. 마이페이지 flex 사진 자동 조절 해제
+3. 광고 AOS 한번 효과시 효과 유지
+4. swipe overflow : hidden 넘어서 좌우 끝까지 보이기
+*/
+
 html,
 body {
   height: 100%;
@@ -10,6 +17,12 @@ body {
   background-color: #000;
 }
 
+/*좌측 스크롤 제거*/
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*공통세팅*/
 .visual_hidden {
   display: none;
 }
@@ -18,8 +31,22 @@ body {
   cursor: pointer;
 }
 
-.wrap {
+.img100 {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.bg_re_size100 {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+#wrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
   /* display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
@@ -42,17 +69,21 @@ header {
 }
 
 /*gnb 아이템*/
-header .nav_item {
+header > div:nth-child(2)::before {
+  content: "LIVE";
+  display: inline;
+  background-color: red;
+  border: #fff 1.5px solid;
+  border-radius: 5px;
+  font-size: smaller;
+  color: #fff;
+  padding: 1px 4px;
+  margin: -5px 3px 0 0;
 }
 
 header .nav_style {
   color: #fff;
-  font-size: 1.3rem;
-}
-
-.bg_re_size100 {
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  font-size: 1.5rem;
 }
 
 header .nav_logo {
@@ -72,23 +103,80 @@ header .paramount {
 /*사이트 버튼(검색, 마이페이지)*/
 aside {
   display: flex;
+  position: absolute;
+  right: 4rem;
   height: 100%;
-  gap: 20px;
+  gap: 40px;
   align-items: center;
 }
 
 .search_bt {
-  width: 30px;
+  width: 40px;
   height: 100%;
   background-image: url(/img/header/icon_search.svg);
   background-position: center center;
   text-indent: -9999px; /*텍스트 안보이게*/
 }
 
-header .mypage {
-  width: 30px;
+/*마이페이지 아이콘*/
+header aside .mypage {
+  width: 40px;
   border-radius: 3px;
   opacity: 1;
+  cursor: pointer;
+}
+
+/*마이페이지 팝업*/
+#mypage_wrap {
+  display: none;
+  width: 20rem;
+  height: 27rem;
+  position: absolute;
+  right: 2rem;
+  top: 4rem;
+  background-color: rgb(48, 48, 48);
+  box-shadow: 0px 5px 10px 0 rgb(0 0 0 / 50%);
+  transition: opacity 0.5s ease-in-out;
+}
+
+/*마이페이지 팝업 - 프로필*/
+.mypage_info {
+  width: 100%;
+  display: flex;
+  gap: 0 10px;
+  padding: 2rem;
+}
+
+.mypage_info div p {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+
+/*마이페이지 프로필 전환 글씨 작게*/
+.mypage_info div p:nth-child(2) {
+  font-size: 1.1rem;
+}
+
+/*마이페이지 메뉴*/
+.mypage_nav {
+  padding: 2rem 0;
+  border-top: 1px solid #3d3d3d;
+}
+
+.mypage_nav ul li {
+  width: 100%;
+  padding: 0 2rem;
+  line-height: 3rem;
+}
+
+.mypage_nav ul li:hover {
+  background-color: #3d3d3d;
+  opacity: 1;
+}
+
+/*마이페이지 팝업 마우스 오버시 표기*/
+header .mypage:hover #mypage_content {
+  display: block;
 }
 
 /*메인 섹션*/
@@ -98,9 +186,28 @@ header .mypage {
 }
 
 /*메인 배너 슬라이드*/
-.main_banner {
+#main_banner {
   position: relative;
   overflow: hidden;
+}
+
+/*자세히보기*/
+#main_banner .main_detail {
+  position: absolute;
+  top: 75%;
+  right: 8%;
+}
+
+#main_banner .main_detail a div {
+  display: flex;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  font-weight: 500;
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 1rem 3.5rem;
+  line-height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /*슬라이드 이미지*/
@@ -113,24 +220,94 @@ header .mypage {
   width: 100%;
 }
 
-.main_banner .slick-prev {
-  left: 10px;
-  z-index: 10;
-  height: 100%;
-  background-image: url(/img/main/slider/icon_slide_left.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  top: 50%;
+#main_banner .slick-slider {
+  position: static;
 }
 
-.main_banner .slick-next {
-  right: 10px;
-  z-index: 10;
+/*슬라이드 재생/정지 버튼*/
+.slick_btn {
+  z-index: 99;
+  position: absolute;
+  bottom: 20%;
+  left: 132px;
+  cursor: pointer;
+}
+
+.btn_pause,
+.btn_play {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: block;
+  fill: #fff;
+  display: none;
+}
+
+.btn_pause.active,
+.btn_play.active {
+  display: block;
+}
+
+.btn_pause:hover,
+.btn_play:hover {
+  fill: #a3a3a3;
+}
+
+/*slick dot 옵션 설정*/
+.slick-dots {
+  position: absolute;
+  left: 10rem;
+  bottom: 20%;
+  width: auto;
+  margin-bottom: 4.5px;
+}
+
+/*본래 있던 dot 없애기*/
+.slick-dots li button,
+.slick-dots button::before {
+  display: none;
+}
+
+/*slick dot 모양 설정*/
+.slick-dots li {
+  background-color: #a3a3a3;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+}
+
+.slick-dots li.slick-active {
+  background-color: #fff;
+}
+
+/*메인 배너 좌우 버튼 설정*/
+#main_banner .slick-prev {
+  width: 4rem;
   height: 100%;
+  left: 0;
   top: 50%;
-  background-image: url(/img/main/slider/icon_slide_right.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-image: url(/img/main/slider/icon_slide_left.svg),
+    linear-gradient(
+      to right,
+      rgb(0, 0, 0) 2%,
+      rgb(0, 0, 0) 3%,
+      rgba(0, 0, 0, 0)
+    );
+  z-index: 99;
+}
+
+#main_banner .slick-next {
+  width: 4rem;
+  height: 100%;
+  right: 0px;
+  top: 50%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url(/img/main/slider/icon_slide_right.svg),
+    linear-gradient(to left, rgb(0, 0, 0) 2%, rgb(0, 0, 0) 3%, rgba(0, 0, 0, 0));
+  z-index: 99;
 }
 
 .slick-prev:before,
@@ -138,21 +315,22 @@ header .mypage {
   content: "";
 }
 
-/*콘텐츠 랩*/
-.main_content {
-  width: 100%;
+/*콘텐츠 전체 랩*/
+#main_content {
   height: 100%;
   overflow: hidden;
+  padding: 0 4rem;
 }
 
-/*콘텐츠 리스트*/
+/*콘텐츠 리스트 덩어리*/
 .content_list {
   width: 100%;
   height: 100%;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /*swiper 끝자락 가리기*/
 }
 
+/*콘텐츠 각 리스트 주제*/
 .content_title {
   margin: 0;
   padding: 2rem 0 2rem 4rem;
@@ -163,17 +341,106 @@ header .mypage {
   color: #fff;
 }
 
+/*swiper 라이브러리*/
 .swiper {
   height: 100%;
   position: relative;
   padding: 0 3.8rem;
+  overflow: visible; /*item 떠오르기 보이도록*/
 }
 
+/*item 덩어리 a태그*/
+.swiper-slide .item_box {
+  position: relative;
+  display: block;
+  transition: 0.5s;
+  z-index: 99;
+}
+
+/*마우스 오버 시 item 떠오름*/
+.swiper-slide .item_box:hover {
+  transform: translateY(-10px);
+}
+
+/*item 썸네일 img 박스*/
 .swiper-slide .item_thumb {
   display: block;
   width: 100%;
-  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative; /*서머리 안넘치게*/
+}
+
+/*item 썸네일 img 태그*/
+.swiper-slide .item_img {
+  display: block;
+  width: 100%;
   object-fit: cover;
+  position: relative;
+}
+
+/*item 제목 p태그*/
+.swiper-slide .item_title {
+  width: 100%;
+  color: #fff;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  text-overflow: ellipsis;
+}
+
+/*item 서머리*/
+.swiper-slide .item_summary {
+  visibility: hidden;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  background-color: #3d3d3d;
+  color: #fff;
+}
+
+.swiper-slide .item_summary dl {
+  padding: 1.6em;
+  margin: 0 auto;
+}
+
+/*item 서머리 제목*/
+.swiper-slide .item_summary dl dt {
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.swiper-slide .item_summary dl dd {
+  margin: 0 auto;
+  opacity: 0.5;
+}
+
+/*item 서머리 분류*/
+.swiper-slide .item_summary dl dd span {
+  line-height: 40px;
+  font-size: 1rem;
+}
+
+/*item 서머리 내용*/
+.swiper-slide .item_summary dl dd p {
+  font-size: 1rem;
+  line-height: 30px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/*마우스 오버 시 item 서머리 노출*/
+.swiper-slide .item_box2:hover .item_summary {
+  visibility: visible;
 }
 
 .swiper-button-next,
@@ -210,10 +477,144 @@ header .mypage {
   content: "";
 }
 
-.item_title {
+/*컨텐츠 광고 영역*/
+#adver_wrap {
   width: 100%;
-  color: #fff;
-  padding: 1rem 0;
-  font-size: 1.2rem;
-  text-overflow: ellipsis;
+  height: 100%;
+  margin: 4rem 0;
+}
+
+#adver_wrap .adver_box {
+  height: 100%;
+  margin: 0 auto;
+}
+
+/*이벤트 전체*/
+#event_wrap {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.event_list {
+  display: flex;
+  gap: 0 10px;
+  padding-left: 50px;
+}
+
+.event_item {
+  width: 300px;
+}
+
+.event_item img {
+  border-radius: 5px;
+}
+
+/*푸터*/
+.font_fff_opa {
+  opacity: 0.4;
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+.font_fff {
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+#ft_wrap {
+  width: 100%;
+  padding: 7rem 4rem 10rem 4rem; /*메인 좌우가 4rem*/
+}
+
+/*공지사항*/
+#ft_notice {
+  display: flex;
+  gap: 0 10px;
+  border-bottom: 1px solid #a3a3a3;
+  padding: 1.25rem 0;
+}
+
+#ft_notice > div {
+  display: flex;
+  gap: 0 15px;
+}
+
+#ft_notice > div:nth-child(1) {
+  flex: 1 1 0%;
+}
+
+#ft_notice > div:nth-child(2) > a:first-child {
+  border-right: 2px solid #a3a3a3;
+  padding-right: 20px;
+  margin-right: 10px;
+}
+
+/*정책 및 그 외*/
+#ft_policy {
+  margin: 1.5rem 0;
+}
+
+#ft_policy nav a {
+  margin-right: 1.5rem;
+}
+
+#ft_info p {
+  line-height: 1.5rem;
+}
+
+#ft_info p span,
+#ft_copyright p {
+  font-size: smaller;
+}
+
+#ft_info p span::before {
+  content: "|";
+  margin: 0 10px;
+}
+
+#ft_info p span:first-child:before {
+  content: "";
+  margin: 0;
+}
+
+/*사업자정보확인 밑줄*/
+#ft_info p:first-child span:nth-child(2) {
+  text-decoration: underline;
+}
+
+/*고객문의 밑줄*/
+#ft_info p:nth-child(3) span:nth-child(1) {
+  text-decoration: underline;
+}
+
+/*sns 아이콘*/
+
+#ft_sns {
+  display: flex;
+  margin: 2rem 0;
+  gap: 0 0.8rem;
+}
+
+#ft_sns div > a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #3d3d3d;
+  border-radius: 50%;
+  position: relative;
+}
+
+#ft_sns div > a:hover svg {
+  fill: #fff;
+  opacity: 0.7;
+}
+
+#ft_sns div > a > svg {
+  fill: #a3a3a3;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

@@ -140,4 +140,8 @@ legend {
   display: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* font-family: -apple-system, BlinkMacSystemFont, Apple SD Gothic Neo, Roboto, Noto Sans CJK KR, Tahoma, 'Noto Sans KR', 'Gmarket Sans', sans-serif; */
