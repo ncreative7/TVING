@@ -4,6 +4,12 @@
 4. swipe overflow : hidden 넘어서 좌우 끝까지 보이기
 */
 
+/*
+헤더 : 050505
+검색 : 191919
+아이템 마우스 오버 : 1A1B1B
+*/
+
 html,
 body {
   height: 100%;
@@ -60,7 +66,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #3d3d3d;
+  background-color: #050505;
   align-items: center;
   gap: 30px;
   padding: 0 3rem;
@@ -88,14 +94,14 @@ header .nav_style {
 header .nav_logo {
   width: 100px;
   height: 100%;
-  background-image: url(/img/header/logo.svg);
+  background-image: url(../img/header/logo.svg);
   background-position: 0 50%;
 }
 
 header .paramount {
   width: 100px;
   height: 100%;
-  background-image: url(/img/header/menu_paramount.svg);
+  background-image: url(../img/header/menu_paramount.svg);
   background-position: center center;
 }
 
@@ -112,7 +118,7 @@ aside {
 aside > .search_bt {
   width: 40px;
   height: 100%;
-  background-image: url(/img/header/icon_search.svg);
+  background-image: url(../img/header/icon_search.svg);
   background-position: center center;
   text-indent: -9999px; /*텍스트 안보이게*/
 }
@@ -122,11 +128,12 @@ aside > .search_bt {
   position: absolute;
   z-index: 999;
   width: 100%;
-  height: 670px;
-  background-color: rgba(25, 25, 25, 0.99);
+  height: 90vh;
+  background-color: #191919;
   padding: 7em 10em;
   display: none;
   transition: 1s;
+  overflow: hidden;
 }
 
 /*search 텍스트 입력창/검색아이콘*/
@@ -134,13 +141,14 @@ aside > .search_bt {
   display: flex;
   border-bottom: 3px solid #fff;
   overflow: visible;
+  margin-top: 1.5rem;
 }
 
 /*search 텍스트 입력창*/
 #search_wrap input {
   width: calc(100% - 3rem);
   height: 30px;
-  font-size: 1.6rem;
+  font-size: 2rem;
   padding: 2rem;
   background-color: transparent;
   color: #fff;
@@ -151,7 +159,7 @@ aside > .search_bt {
 /*search 검색아이콘*/
 #search_wrap .search_bt {
   width: 40px;
-  background-image: url(/img/header/icon_search.svg);
+  background-image: url(../img/header/icon_search.svg);
   background-position: center center;
   text-indent: -9999px; /*텍스트 안보이게*/
 }
@@ -160,41 +168,54 @@ aside > .search_bt {
 #search_word {
   display: flex;
   align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 5rem;
 }
 
 #search_word ul {
-  padding: 2rem;
+  padding: 0 2rem;
+  width: 50%;
+  height: 100%;
+}
+
+#search_word ul:last-child {
+  border-left: 1px solid #3d3d3d;
 }
 
 /*검색창 타이틀*/
 #search_word ul h2 {
   color: #fff;
-  margin-bottom: 1rem;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
 }
 
 #search_word ul button {
   display: flex;
-  gap: 10px;
 }
 
 /*실시간 인기검색어 넘버*/
 #search_word ul button span {
+  width: 2.5rem;
   color: rgb(255, 21, 60);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.5em;
+  line-height: 1.6em;
+  text-align: left;
 }
 
 #search_word ul li {
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: 1.5em;
   color: #fff;
   margin: 10px 0;
+  opacity: 0.8;
 }
 
 #search_word ul button h3 {
   color: #fff;
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: 500;
+  opacity: 0.8;
 }
 
 /*마이페이지 아이콘*/
@@ -368,7 +389,7 @@ header .mypage:hover #mypage_content {
   top: 50%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-image: url(/img/main/slider/icon_slide_left.svg),
+  background-image: url(../img/main/slider/icon_slide_left.svg),
     linear-gradient(
       to right,
       rgb(0, 0, 0) 2%,
@@ -385,7 +406,7 @@ header .mypage:hover #mypage_content {
   top: 50%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-image: url(/img/main/slider/icon_slide_right.svg),
+  background-image: url(../img/main/slider/icon_slide_right.svg),
     linear-gradient(to left, rgb(0, 0, 0) 2%, rgb(0, 0, 0) 3%, rgba(0, 0, 0, 0));
   z-index: 99;
 }
@@ -474,7 +495,7 @@ header .mypage:hover #mypage_content {
   position: absolute;
   height: 100%;
   top: 0;
-  background-color: #3d3d3d;
+  background-color: #1a1b1b;
   color: #fff;
 }
 
@@ -542,13 +563,13 @@ header .mypage:hover #mypage_content {
 
 .swiper-button-next {
   right: 0;
-  background-image: url(/img/main/slider/icon_slide_right.svg),
+  background-image: url(../img/main/slider/icon_slide_right.svg),
     linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0) 44%, rgba(0, 0, 0, 0));
 }
 
 .swiper-button-prev {
   left: 0;
-  background-image: url(/img/main/slider/icon_slide_left.svg),
+  background-image: url(../img/main/slider/icon_slide_left.svg),
     linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0) 44%, rgba(0, 0, 0, 0));
 }
 
