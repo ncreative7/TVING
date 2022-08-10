@@ -36,12 +36,12 @@ $(document).ready(function () {
   });
 
 
-   $('.mypage').mouseover(function() {
+  $('.mypage').mouseover(function() {
    $("#mypage_wrap").css("display", "block");
   });
-  $('.mypage').mouseout(function() {
-   $("#mypage_wrap").cimage.pngss("display", "none");
-  });
+  // $('.mypage').mouseout(function() {
+  //  $("#mypage_wrap").css("display", "none");
+  // });
 
   $('#mypage_wrap').mouseover(function() {
    $("#mypage_wrap").css("display", "block");
@@ -54,7 +54,7 @@ $(document).ready(function () {
   //검색창 토글 --------------------------------------------
   $('.search_bt').click(function(){
     $('#search_wrap').toggle();
-    
+
   })
   
   //상단 올라가는 버튼
