@@ -103,6 +103,7 @@ header .paramount {
   height: 100%;
   background-image: url(../img/header/menu_paramount.svg);
   background-position: center center;
+  cursor: pointer;
 }
 
 /*사이트 버튼(검색, 마이페이지)*/
@@ -149,6 +150,7 @@ aside > .search_bt {
   width: calc(100% - 3rem);
   height: 30px;
   font-size: 2rem;
+  font-weight: 700;
   padding: 2rem;
   background-color: transparent;
   color: #fff;
