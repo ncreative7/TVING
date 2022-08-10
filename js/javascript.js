@@ -54,6 +54,7 @@ $(document).ready(function () {
   //검색창 토글 --------------------------------------------
   $('.search_bt').click(function(){
     $('#search_wrap').toggle();
+    
   })
   
   //상단 올라가는 버튼
